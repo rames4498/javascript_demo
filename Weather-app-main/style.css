@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainBg: rgb(0, 38, 62);
+  --containerBg: rgb(255, 255, 255);
+  --iconBg: black;
+  --submitBtnBg: rgb(163, 253, 163);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--mainBg);
+  flex-direction: column;
+}
+
+.search-box {
+  position: absolute;
+  top: 20px;
+  background: white;
+  height: 50px;
+  width: 400px;
+  border-radius: 50px;
+}
+
+.search-box > input {
+  width: 350px;
+  border: 0;
+  outline: none;
+  height: 100%;
+  border-radius: 50px 0 0 50px;
+  padding: 0 10px;
+  font-size: 16px;
+}
+.search-box > button {
+  width: 50px;
+  height: 100%;
+  border-radius: 0 50px 50px 0;
+  outline: 0;
+  border: 0;
+  background: var(--submitBtnBg);
+}
+
+.container {
+  height: 400px;
+  width: 300px;
+  background: var(--containerBg);
+  border-radius: 12px;
+  flex-direction: column;
+}
+
+.temperature {
+  height: 250px;
+  width: 90%;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.container .temperature > img {
+  height: 170px;
+  width: 170px;
+  padding: 10px;
+  border-radius: 50%;
+  background: var(--iconBg);
+}
+
+.container .temperature .temp {
+  font-size: 50px;
+}
+
+.weather-info {
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#weather-type {
+  width: 90%;
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: inset -2px -2px 2px rgba(0, 0, 0, 0.5),
+    -2px -2px 2px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: fit-content;
+}
+
+table tr td,
+table tr th {
+  text-align: left;
+  padding: 0 10px;
+}
